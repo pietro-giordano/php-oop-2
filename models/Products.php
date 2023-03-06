@@ -21,9 +21,8 @@ class Product
 
       public function printProduct()
       {
-            echo '<div class="card">';
+            echo '<div class="card mt-3 mb-3">';
             echo '<img src="' . $this->img . '" card="card-img-top">';
-
             echo '<div class="card-body">';
             echo '<h5 class="card-title">' . $this->title . '</h5>';
             echo '<p class="card-text">Prezzo: ' . $this->price . '€</p>';
@@ -39,8 +38,8 @@ class Product
                   echo $category;
             }
             echo '</p>';
-            echo '<p class="card-text">Tipologia: ' . $this->type . '</p>';
 
+            echo '<p class="card-text">Tipologia: ' . $this->type . '</p>';
             echo '</div>';
             echo '</div>';
       }

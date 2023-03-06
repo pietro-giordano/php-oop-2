@@ -17,7 +17,7 @@ require_once __DIR__ . '/database.php';
 
 <body>
       <div class="container">
-            <div class="row mt-3">
+            <div class="row">
                   <?php
                   foreach ($products as $product) {
                         echo '<div class="col-4">';
