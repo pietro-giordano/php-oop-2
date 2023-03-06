@@ -2,10 +2,10 @@
 
 class Category
 {
-      public $name;
+      public $animal;
 
-      public function __construct(string $_name)
+      public function __construct(string $_animal)
       {
-            $this->name = $_name;
+            $this->animal = $_animal;
       }
 }

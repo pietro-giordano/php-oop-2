@@ -21,7 +21,7 @@ require_once __DIR__ . '/database.php';
                   <?php
                   foreach ($products as $product) {
                         echo '<div class="col-4">';
-                        echo $product->printProduct();
+                        echo $product->print();
                         echo '</div>';
                   }
                   ?>

@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/Categories.php';
+
 class Product
 {
       public $img;
@@ -7,16 +9,14 @@ class Product
       public $price;
       public $disponibility;
       public $categories;
-      public $type;
 
-      public function __construct(string $_img, string $_title, float $_price, int $_disponibility, array $_categories, $_type)
+      public function __construct(string $_img, string $_title, float $_price, int $_disponibility, array $_categories)
       {
             $this->img = $_img;
             $this->title = $_title;
             $this->price = $_price;
             $this->disponibility = $_disponibility;
             $this->categories = $_categories;
-            $this->type = $_type;
       }
 
       public function printProduct()
@@ -34,13 +34,11 @@ class Product
             }
 
             echo '<p class="card-text">Categorie: ';
+            echo '<ul>';
             foreach ($this->categories as $category) {
-                  echo $category;
+                  echo '<li>' . $category->animal . '</li>';
             }
+            echo '</ul>';
             echo '</p>';
-
-            echo '<p class="card-text">Tipologia: ' . $this->type . '</p>';
-            echo '</div>';
-            echo '</div>';
       }
 }
