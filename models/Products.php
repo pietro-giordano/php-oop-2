@@ -25,7 +25,13 @@ class Product
             echo '<div class="card mt-3 mb-3">';
             echo '<img src="' . $this->img . '" card="card-img-top">';
             echo '<div class="card-body">';
-            echo '<h5 class="card-title">' . $this->name . '</h5>';
+
+            try {
+                  echo '<h5 class="card-title">' . $this->name . '</h5>';
+            } catch (Exception $e) {
+                  echo '<h1>ERRORE! Nome prodotto non valido!</h1>';
+            }
+
             echo '<p class="card-text">Prezzo: ' . $this->price . '€</p>';
 
             if ($this->disponibility == 0) {
