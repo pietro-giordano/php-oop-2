@@ -1,11 +1,15 @@
 <?php
 
+require_once __DIR__ . '/../traits/name.php';
+
 class Category
 {
-      public $animal;
+      use name;
+      public $icon;
 
-      public function __construct(string $_animal)
+      public function __construct(string $_name, string $_icon)
       {
-            $this->animal = $_animal;
+            $this->name = $_name;
+            $this->icon = $_icon;
       }
 }
