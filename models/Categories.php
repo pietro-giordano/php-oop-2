@@ -9,12 +9,7 @@ class Category
 
       public function __construct(string $_name, string $_icon)
       {
-            if (strlen($_name) > 3) {
-                  $this->name = $_name;
-            } else {
-                  throw new Exception('Stringa nome prodotto troppo corta');
-            }
-
+            $this->name = $_name;
             $this->icon = $_icon;
       }
 }

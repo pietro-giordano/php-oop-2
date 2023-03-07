@@ -13,7 +13,11 @@ class Product
 
       public function __construct(string $_name, string $_img, float $_price, int $_disponibility, array $_categories)
       {
-            $this->name = $_name;
+            if (strlen($_name) > 20) {
+                  $this->name = $_name;
+            } else {
+                  throw new Exception('Nome prodotto non valido');
+            }
             $this->img = $_img;
             $this->price = $_price;
             $this->disponibility = $_disponibility;
